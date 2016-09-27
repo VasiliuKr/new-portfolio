@@ -1,0 +1,33 @@
+@import 'helpers/variables';
+@import 'helpers/mixins';
+
+* {
+	box-sizing: border-box;
+}
+ul li {
+	list-style-type: none;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+html, body {
+	height: 100%;
+}
+.page-wrapper {
+	min-height: 100%;
+	margin-bottom: -150px; // Равно высоте футера
+	&:after {
+		content: '';
+	display: block;
+	height: 150px; // Равно высоте футера
+	}
+}
+
+@import 'layout/header';
+
+
+
+@import 'layout/footer';
+@import 'common/sprites';
+@import 'common/fonts';
