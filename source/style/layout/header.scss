@@ -1,7 +1,7 @@
 .header {
 	background: url(../img/mountains_header.jpg);
 	background-size: cover;
-	height: 395px;
+	height: 620px;
 }
 .transparent-layer {
 	background: rgba(1, 102, 114, 0.3);
@@ -12,7 +12,7 @@
 	padding-top: 28px;
 	margin-left: 12px;
 	margin-right: 30px;
-	margin-bottom: 10px;
+	margin-bottom: 80px;
 	.socials {
 		margin-top: 3px;
 	}
@@ -40,4 +40,29 @@
 }
 .user-pic {
 	width: 140px;
+}
+.author {
+	margin-top: 24px
+}
+.author__name {
+	text-align: center;
+	font-weight: 500;
+	font-size: 35px;
+	color: #fff;
+	margin-bottom: 6px;
+}
+.author__site {
+	text-align: center;
+	font-weight: 300;
+	font-size: 16px;
+	color: #fff;
+}
+.transparent-title {
+	opacity: 0.07;
+	text-align: center;
+	margin-left: 25px;
+	margin-top: -262px;
+}
+.transparent-title__pic {
+	max-width: 100%;
 }

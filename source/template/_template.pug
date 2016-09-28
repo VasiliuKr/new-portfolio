@@ -16,6 +16,9 @@ html(lang="ru")
 		
 		link(rel='stylesheet' href='/assets/css/foundation.css')
 		link(rel='stylesheet' href='/assets/css/app.css')
+
+		block styles
+
 		script(src='/assets/js/foundation.js' defer)
 
 		block scripts
@@ -41,6 +44,11 @@ html(lang="ru")
 									i.icon.icon-in
 						a.menu-link(href="#"): i.icon.icon-hamburger
 					.user-avatar: img.user-pic(src="assets/img/photo.jpg")
+					.author
+						.author__name Владимир Астахов
+						.author__site Личный сайт веб разработчика
+					.transparent-title
+						img(class="transparent-title__pic" src="assets/img/portfolio_header.png")
 
 			block content
 
