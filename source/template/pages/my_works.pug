@@ -1,0 +1,39 @@
+extends ../_template
+
+block variables
+	- var title = 'Мои работы'
+
+block styles
+	link(rel='stylesheet' href='/assets/css/my_works.css')
+
+block scripts
+
+block content
+	.main-content
+		.triangle
+		.title-wrapper
+			.title.title_main Мои работы
+			.transparent-title
+				img(class="adaptive-pic" src="assets/img/works_header.png")
+		.portfolio
+			.left-column
+				.column-container
+					.portfolio__project
+						.title.title_secondary Сайт школы онлайн образования
+						.project-tools HTML, CSS, Javasript
+						a.project-link(href="")
+							i.icon.icon-link
+							span.button-text Посмотреть сайт
+			.right-column
+				.column-container
+					.portfolio__slider
+						.main-slide
+							img(class="adaptive-pic" src="assets/img/works.png")
+						.slider-switch
+							.slider-shadow
+							a.slide-link(href="#")
+								.slide.slide_prev
+									img(class="adaptive-pic" src="assets/img/yoga.jpg")
+							a.slide-link(href="#")
+								.slide.slide_next
+									img(class="adaptive-pic" src="assets/img/interior.jpg")

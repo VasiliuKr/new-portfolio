@@ -1,13 +1,53 @@
-extends ../_template
+doctype html
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		title Главная
+		meta(content="" name="author")
+		meta(content="" name="description")
+		meta(content="" name="keywords")
+		meta(content="width=device-width, initial-scale=1" name="viewport")
+		meta(content="ie=edge" http-equiv="x-ua-compatible")
 
-block variables
-	- var title = 'Home page'
+		//- favicon block start
+		//- favicon block end
+		
+		link(rel='stylesheet' href='/assets/css/foundation.css')
+		link(rel='stylesheet' href='/assets/css/app.css')
+		link(rel='stylesheet' href='/assets/css/welcome.css')
 
-block styles
-	link(rel='stylesheet' href='/assets/css/about_me.css')
 
-block scripts
+		script(src='/assets/js/foundation.js' defer)
 
 
-block content
-	p I am index.page
+		<!--[if lt IE 9]>
+		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
+		<![endif]-->
+
+	body
+		a.autorization-button(href="#") Авторизоваться
+		.welcome-wrapper
+			.welcome-container
+				.welcome-container-inner
+					.user-avatar: img.user-pic(src="assets/img/photo.jpg")
+					.author
+						.author__name Владимир Астахов
+						.author__site Личный сайт веб разработчика
+					ul.socials-list
+						li.socials__item
+							a.social-link(href="https://vk.com/id17323389")
+								i.icon.icon-vk_green
+						li.socials__item
+							a.social-link(href="https://github.com/VasiliuKr")
+								i.icon.icon-github_green
+						li.socials__item
+							a.social-link(href="https://vk.com/id17323389")
+								i.icon.icon-in_green
+				ul.welcome-links__list
+					li.welcome-links__item
+						a.welcome-link(href="my_works.html") Мои работы
+					li.welcome-links__item
+						a.welcome-link(href="about_me.html") Обо мне
+					li.welcome-links__item
+						a.welcome-link(href="blog.html") Блог
+		.copyright © Владимир Астахов | создано с любовью в LoftSchool | 2016

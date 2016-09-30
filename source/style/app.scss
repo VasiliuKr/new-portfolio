@@ -20,9 +20,85 @@ html, body {
 	margin-bottom: -150px; // Равно высоте футера
 	&:after {
 		content: '';
-	display: block;
-	height: 150px; // Равно высоте футера
+		display: block;
+		height: 150px;
 	}
+}
+.transparent-title {
+	opacity: 0.07;
+	text-align: center;
+}
+.main-content {
+	@include clearfix;
+	background: #e6e6e1;
+}
+.triangle {
+	background: url('../img/bg.png');
+	height: 122px;
+	margin-top: -122px;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.title-wrapper {
+	text-align: center;
+}
+.left-column {
+	width: 50%;
+	float: left;
+	.column-container {
+		padding-left: 80px;
+		padding-right: 77px;
+	}
+}
+.right-column {
+	width: 50%;
+	float: right;
+	.column-container {
+		padding-left: 39px;
+		padding-right: 10px;
+	}
+}
+.column-container {
+	padding-top: 110px;
+	padding-bottom: 20px;
+	text-align: center;
+}
+.adaptive-pic {
+	max-width: 100%;
+}
+.title {
+	font-family: Bernier;
+	position: relative;
+	display: inline-block;
+	&:after {
+		content: "";
+		width: 22px;
+		height: 5px;
+		background: #000;
+		opacity: 0.2;
+		position: absolute;
+		right: -40px;
+		top: 50%;
+	}
+	&:before {
+		content: "";
+		width: 22px;
+		height: 5px;
+		background: #000;
+		opacity: 0.2;
+		position: absolute;
+		left: -45px;
+		top: 50%;
+	}
+}
+.title_main {
+	font-size: 63px;
+	line-height: 66px;
+}
+.title_secondary {
+	font-size: 35px;
+	line-height: 41px;
+	max-width: 270px;
 }
 
 @import 'layout/header';
