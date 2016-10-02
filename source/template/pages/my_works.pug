@@ -16,24 +16,91 @@ block content
 			.transparent-title
 				img(class="adaptive-pic" src="assets/img/works_header.png")
 		.portfolio
-			.left-column
-				.column-container
-					.portfolio__project
-						.title.title_secondary Сайт школы онлайн образования
-						.project-tools HTML, CSS, Javasript
-						a.project-link(href="")
-							i.icon.icon-link
-							span.button-text Посмотреть сайт
-			.right-column
-				.column-container
-					.portfolio__slider
-						.main-slide
-							img(class="adaptive-pic" src="assets/img/works.png")
-						.slider-switch
-							.slider-shadow
-							a.slide-link(href="#")
-								.slide.slide_prev
-									img(class="adaptive-pic" src="assets/img/yoga.jpg")
-							a.slide-link(href="#")
-								.slide.slide_next
-									img(class="adaptive-pic" src="assets/img/interior.jpg")
+			ul.portfolio__list
+				li.portfolio__item.active
+					.project-image
+						img.project-pic(src='assets/img/loftschool.jpg' alt='Loftschool.com')
+					.project-info
+						.project-info-inner
+							.title.title_secondary Сайт школы онлайн образования
+							.project-tools HTML, CSS, Javasript
+							a.project-link(href="https://loftschool.com" target="_blank")
+								i.icon.icon-link
+								span.button-text Посмотреть сайт
+				li.portfolio__item
+					.project-image
+						img.project-pic(src='assets/img/loftschool.jpg' alt='Loftschool.com')
+					.project-info
+						.project-info-inner
+							.title.title_secondary Сайт школы онлайн образования
+							.project-tools HTML, CSS, Javasript
+							a.project-link(href="https://loftschool.com" target="_blank")
+								i.icon.icon-link
+								span.button-text Посмотреть сайт
+				li.portfolio__item
+					.project-image
+						img.project-pic(src='assets/img/loftschool.jpg' alt='Loftschool.com')
+					.project-info
+						.project-info-inner
+							.title.title_secondary Сайт школы онлайн образования
+							.project-tools HTML, CSS, Javasript
+							a.project-link(href="https://loftschool.com" target="_blank")
+								i.icon.icon-link
+								span.button-text Посмотреть сайт
+				li.portfolio__item
+					.project-image
+						img.project-pic(src='assets/img/loftschool.jpg' alt='Loftschool.com')
+					.project-info
+						.project-info-inner
+							.title.title_secondary Сайт школы онлайн образования
+							.project-tools HTML, CSS, Javasript
+							a.project-link(href="https://loftschool.com" target="_blank")
+								i.icon.icon-link
+								span.button-text Посмотреть сайт
+			ul.slider__dots
+				li.slider__dots_item.active
+					a.slider__dots_link(href="#")
+				li.slider__dots_item
+					a.slider__dots_link(href="#")
+				li.slider__dots_item
+					a.slider__dots_link(href="#")
+				li.slider__dots_item
+					a.slider__dots_link(href="#")
+			.slider__controls
+				a.slider__controls-btn.slider__controls-btn_next
+				a.slider__controls-btn.slider__controls-btn_prev
+			
+	.feedback
+		.title-wrapper
+			.title.title_main Что обо мнe говорят
+			.transparent-title
+				img(class="adaptive-pic" src="assets/img/about_header.png")
+		.feedback__reviews
+			ul.reviews__list
+				li.reviews__item
+					.review-text Этот парень проходил обучение веб-разработке не где-то, а в LoftSchool! 2 месяца только самых тяжелых испытаний и бессонных ночей!
+					.review-author
+						.user-avatar: img.user-pic(src="assets/img/kd.jpg" alt='Дмитрий Ковальчук')
+						.review-author-inner
+							.review-author-name Ковальчук Дмитрий
+							.review-author-position основатель Loftschool
+				li.reviews__item
+					.review-text Этот код выдержет любые испытания. Только пожалуйста, не загружается сайт на слишком старых браузерах!
+					.review-author
+						.user-avatar: img.user-pic(src="assets/img/zz.jpg" alt='Зар Захаров')
+						.review-author-inner
+							.review-author-name Зар Захаров
+							.review-author-position преподаватель
+		.feedback__form
+			.title.title_secondary Связаться со мной
+			form.form
+				.input-wrapper
+					input(type="text" class="form__input" name="userName" id="userName" value="" placeholder="Имя")
+				.input-wrapper
+					input(type="email" class="form__input" name="userEmail" id="userEmail" value="" placeholder="Email")
+				.input-wrapper
+					textarea(name="message" id="message" class="form__input" cols="40" rows="6" placeholder="Ваше сообщение")
+				input(type="submit" class="form__btn form__btn_submit" value="Отправить")
+				input(type="reset" class="form__btn form__btn_reset" value="Очистить")
+		a.arrow-up-link(href="#")
+			.icon-arrow_up

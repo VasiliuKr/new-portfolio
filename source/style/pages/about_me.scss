@@ -7,7 +7,7 @@
 	}
 }
 .main-content {
-	@include clearfix;
+	@extend %clearfix;
 	background: #e6e6e1;
 }
 .triangle {
@@ -60,7 +60,7 @@
 	padding-left: 0;
 	margin-bottom: 0;
 	margin-top: 0;
-	@include clearfix;
+	@extend %clearfix;
 }
 .skills__item {
 	float: left;

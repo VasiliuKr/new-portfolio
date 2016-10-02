@@ -29,8 +29,8 @@ html, body {
 	text-align: center;
 }
 .main-content {
-	@include clearfix;
-	background: #e6e6e1;
+	@extend %clearfix;
+	background: #fff;
 }
 .triangle {
 	background: url('../img/bg.png');
@@ -38,6 +38,10 @@ html, body {
 	margin-top: -122px;
 	background-repeat: no-repeat;
 	background-size: cover;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
 }
 .title-wrapper {
 	text-align: center;
@@ -94,6 +98,7 @@ html, body {
 .title_main {
 	font-size: 63px;
 	line-height: 66px;
+	max-width: 300px;
 }
 .title_secondary {
 	font-size: 35px;

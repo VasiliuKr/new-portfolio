@@ -1,15 +1,61 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
+.page-wrapper {
+	&:after {
+		height: 0;
+	}
+}
+.triangle {
+	background-image: url(../img/bg_white.png);
+}
 .title-wrapper {
-	margin-top: 50px;
+	margin-top: 40px;
 	.transparent-title {
 		margin-top: -125px;
 	}
 }
-.portfolio__project {
-	padding-left: 50px;
-	padding-right: 50px;
+.portfolio {
+	position: relative;
+	background-color: #e6e6e1;
+}
+.portfolio__list {
+	padding-top: 90px;
+	padding-left: 0;
+	max-width: 1020px;
+	height: 780px;
+	margin: 0 auto;
+}
+.portfolio__item {
+	@extend %clearfix;
+	display: none;
+	height: 100%;
+}
+.portfolio__item.active {
+	display: block;
+}
+.project-image {
+	float: left;
+	width: 50%;
+	height: 100%;
+	.project-pic {
+		max-width: 100%;
+	}
+}
+.project-info {
+	float: left;
+	width: 50%;
+	height: 100%;
+	padding-left: 100px;
+	display: flex;
+	.project-info-inner {
+		margin: auto
+	}
+	.title {
+		&:before, &:after {
+			content: none;
+		}
+	}
 }
 .project-tools {
 	text-transform: uppercase;
@@ -19,6 +65,9 @@
 	border-top: 1px solid $main-color-active;
 	padding-top: 13px;
 	padding-bottom: 13px;
+	margin-top: 35px;
+	margin-bottom: 35px;
+	width: 380px;
 }
 .project-link {
 	display: inline-block;
@@ -38,18 +87,159 @@
 	padding-left: 10px;
 	vertical-align: middle;
 }
-.slider-switch {
-	position: relative;
-	@include clearfix;
-}
-.slider-shadow {
+.slider__dots {
 	position: absolute;
-	width: 100%;
-	height: 100%;
-	background: #b6b4ae;
-	opacity: 0.5;
+	bottom: 2%;
+	left: 0;
+	right: 0;
+	text-align: center;
+	z-index: 10;
 }
-.slide-link {
-	width: 50%;
+.slider__dots_item {
+	display: inline-block;
+	margin: 0 9px;
+	border-radius: 50%;
+	border: 2px solid $main-color;
+	overflow: hidden;
+	background: #fff;
+	&:hover {
+		background: $main-color;
+	}
+}
+.slider__dots_item.active {
+	background: $main-color;
+}
+.slider__dots_link {
+	text-decoration: none;
+	display: block;
+	width: 10px;
+	height: 10px;
+}
+.slider__controls-btn {
+	position: absolute;
+	top: 50%;
+	display: block;
+	z-index: 3;
+	width: 18px;
+	height: 29px;
+}
+.slider__controls-btn_next {
+	background: url(../img/arrow_right.png);
+	right: 3%;
+	&:hover {
+		background: url(../img/arrow_right_hover.png);
+	}
+}
+.slider__controls-btn_prev {
+	background: url(../img/arrow_left.png);
+	left: 3%;
+	&:hover {
+		background: url(../img/arrow_left_hover.png);
+	}
+}
+.feedback {
+	background: url('../img/lake_bg.png');
+	background-size: cover;
+	padding-bottom: 220px;
+	background-position-y: -154px;
+}
+.feedback__reviews {
+	max-width: 780px;
+	margin: 55px auto 70px auto;
+}
+.reviews__list {
+	padding-left: 0;
+	@extend %clearfix;
+}
+.reviews__item {
 	float: left;
+	width: 49%;
+	position: relative;
+	&:before {
+		content: "";
+		background: url(../img/quotes.png);
+		width: 33px;
+		height: 29px;
+		position: absolute;
+	}
+	&:nth-child(odd) {
+		margin-right: 2%;
+	}
+	.user-avatar {
+		width: 78px;
+		height: 78px;
+		float: left;
+	}
+	.user-pic {
+		width: 78px;
+	}
+}
+.review-text {
+	padding-top: 52px;
+	line-height: 26px;
+	margin-bottom: 20px;
+}
+.review-author {
+	@extend %clearfix;
+	color: $main-color;
+	line-height: 1.5;
+}
+.review-author-inner {
+	float: left;
+	margin-left: 20px;
+	margin-top: 14px;
+}
+.review-author-name {
+	font-weight: 500;
+}
+.feedback__form {
+	width: 380px;
+	margin: 0 auto 68px auto;
+	padding-top: 30px;
+	background: rgba($main-color,0.85);
+	border-radius: 5px;
+	overflow: hidden;
+	.title {
+		margin: 0 auto;
+		display: block;
+	}
+	.input-wrapper {
+		margin: 0 17px 20px 17px;
+	}
+}
+.form {
+	padding-top: 30px;
+	@extend %clearfix;
+}
+.form__input {
+	display: block;
+	border: none;
+	border-radius: 4px;
+	padding: 14px 20px;
+	color: #373e42;
+	resize: none;
+	width: 100%;
+}
+.form__btn {
+	background: rgba($main-color,0.85);
+	color: #fff;
+	font-weight: 500;
+	padding: 16px 30px;
+	font-size: 16px;
+	display: block;
+	float: left;
+	width: 50%;
+	border: none;
+	&:hover {
+		background: rgba($main-color-active,0.6);
+	}
+}
+.form__btn_submit {
+	border-right: 1px solid #dee3e7;
+}
+.arrow-up-link {
+	display: block;
+	.icon-arrow_up {
+		margin: 0 auto;
+	}
 }
