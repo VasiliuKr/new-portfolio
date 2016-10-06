@@ -7,11 +7,15 @@ body {
 	background-size: cover;
 	position: relative;
 	background-position: 50% 10%;
-	min-height: 700px;
+	
+	@include phones {
+			
+			text-align: center;
+		}
 }
 .autorization-button {
-	display: inline-block;
 	position: absolute;
+	text-align: center;
 	color: #fff;
 	font-weight: 500;
 	border-radius: 5px;
@@ -23,16 +27,49 @@ body {
 		background: rgba(255, 255, 255, 0.6);
 		color: $main-color;
 	}
+	@include phones {
+		position: static;
+		display: inline-block;
+		margin-top: 10px;
+	}
 }
 .welcome-wrapper {
-	display: flex;
 	height: 100%;
+	@include phones {
+		display: block;
+		height: auto;
+		margin-top: 35px;
+		margin-bottom: 35px;
+	}
+}
+.flipper-container {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	perspective: 1000px;
+	width: 380px;
+	height: 397px;
+}
+.flipper {
+	transition: 0.9s;
+	transform-style: preserve-3d; /*flat*/
+	position: relative;
 }
 .welcome-container {
-	max-width: 380px;
-	margin: auto;
+	width: 380px;
+	height: 397px;
+	position: absolute;
+	backface-visibility: hidden;
 	border-radius: 5px;
 	overflow: hidden;
+	text-align: center;
+	transform: rotateY(0deg);
+	@include phones {
+		width: 300px;
+	}
 	.welcome-container-inner {
 		background: rgba(255,255,255,0.85);
 		padding-top: 40px;
@@ -42,13 +79,23 @@ body {
 		padding-left: 60px;
 		padding-right: 60px;
 		margin-top: 16px;
+		@include phones {
+			padding-left: 0;
+			padding-right: 0;
+		}
 	}
 	.author__name {
 		color: #000;
 		font-size: 28px;
+		@include phones {
+			font-size: 21px;
+		}
 	}
 	.author__site {
 		color: #000;
+		@include phones {
+			font-size: 14px;
+		}
 	}
 }
 .socials-list {
@@ -78,10 +125,14 @@ body {
 	background: rgba($main-color,0.85);
 	color: #fff;
 	font-weight: 500;
-	padding: 16px 30px;
+	padding: 16px 0;
+	width: 33.33%;
 	display: inline-block;
 	text-align: center;
 	font-size: 16px;
+	@include phones {
+			font-size: 14px;
+		}
 	&:hover {
 		background: rgba($main-color-active,0.6);
 	}
@@ -89,9 +140,145 @@ body {
 		border-right: 1px solid #dee3e7;
 	}
 }
+.welcome-container_autorization {
+	// visibility: hidden;
+	transform: rotateY(180deg);
+	.welcome-container-inner {
+		padding-bottom: 0;
+		padding-top: 31px;
+	}
+	.input-wrapper {
+		@extend %clearfix;
+		margin-left: 5%;
+		margin-right: 5%;
+		margin-bottom: 20px;
+		width: 90%;
+		border-radius: 5px;
+		overflow: hidden;
+	}
+	.icon-wrapper {
+		float: left;
+		width: 14%;
+		height: 46px;
+		position: relative;
+		background: #f0efe9;
+		.icon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+	.form__input {
+		float: left;
+		width: 86%;
+		border-radius: 0;
+	}
+}
+.checkbox-wrapper {
+	margin-bottom: 20px;
+}
+.checkbox + .checkbox-label {
+	cursor: pointer; /*Show here that label is clickable*/
+}
+
+.checkbox:not(checked) {
+	position: absolute; /*Hide original checkbox*/
+	opacity: 0;
+}
+.checkbox:not(checked) + .checkbox-label {
+	position: relative;
+	padding-left: 40px;
+}
+.checkbox:not(checked) + .checkbox-label:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 2px;
+	width: 19px;
+	height: 19px;
+	border-radius: 3px;
+	background: #fff;
+	border: 1px solid #727272;
+}
+ .checkbox:checked + .checkbox-label:before {
+	background: url(../img/check.png);
+	border: none;
+	width: 20px;
+	height: 20px;
+}
+.captcha-question {
+	font-weight: 500;
+	margin-bottom: 10px;
+}
+.radio + .radio-label {
+	cursor: pointer; /*Show here that label is clickable*/
+}
+
+.radio:not(checked) {
+	position: absolute; /*Hide original radio*/
+	opacity: 0;
+}
+.radio:not(checked) + .radio-label {
+	position: relative;
+	padding-left: 40px;
+}
+.radio:not(checked) + .radio-label:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 8px;
+	width: 20px;
+	height: 20px;
+	border-radius: 50px;
+	background: #fff;
+	border: 1px solid #727272;
+}
+.radio:checked + .radio-label:after {
+	content: '';
+	position: absolute;
+	top: 7px;
+	left: 15px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50px;
+	background: $main-color;
+}
+.radio:checked + .radio-label {
+	color: $main-color;
+}
+.radio-label_first {
+	margin-right: 30px;
+}
+.form__buttons {
+	margin-top: 30px;
+}
+.form__btn {
+	display: block;
+	width: 50%;
+	float: left;
+	background: rgba($main-color,0.85);
+	color: #fff;
+	font-weight: 500;
+	padding: 16px 30px;
+	font-size: 16px;
+	border: none;
+	&:hover {
+		background: rgba($main-color-active,0.6);
+	}
+}
+.form__btn_submit {
+	border-left: 1px solid #dee3e7;
+}
 .copyright {
 	width: 100%;
 	text-align: center;
 	color: #fff;
-	line-height: 100px;
+	position: absolute;
+	bottom: 20px;
+	@include phones {
+			padding: 0 35px;
+		}
 }

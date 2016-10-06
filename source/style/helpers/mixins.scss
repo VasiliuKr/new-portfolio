@@ -9,3 +9,21 @@
 		clear: both;
 	}
 }
+
+// media queries
+
+@mixin desktop {
+	@media screen and (min-width: 1200px) {
+		@content;
+	}
+}
+@mixin tablets {
+	@media screen and (max-width: 768px) {
+		@content;
+	}
+}
+@mixin phones {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}

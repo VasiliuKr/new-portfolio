@@ -17,6 +17,7 @@ html(lang="ru")
 
 
 		script(src='/assets/js/foundation.js' defer)
+		script(src='/assets/js/app.js' defer)
 
 
 		<!--[if lt IE 9]>
@@ -26,27 +27,53 @@ html(lang="ru")
 	body
 		a.autorization-button(href="#") Авторизоваться
 		.welcome-wrapper
-			.welcome-container
-				.welcome-container-inner
-					.user-avatar: img.user-pic(src="assets/img/userfiles/my_photo.jpg" alt="Василий Краснов")
-					.author
-						.author__name Василий Краснов
-						.author__site Личный сайт веб разработчика
-					ul.socials-list
-						li.socials__item
-							a.social-link(href="https://vk.com/id17323389" target="_blank")
-								i.icon.icon-vk_green
-						li.socials__item
-							a.social-link(href="https://github.com/VasiliuKr" target="_blank")
-								i.icon.icon-github_green
-						li.socials__item
-							a.social-link(href="https://www.linkedin.com/in/vasiliy-krasnov" target="_blank")
-								i.icon.icon-in_green
-				ul.welcome-links__list
-					li.welcome-links__item
-						a.welcome-link(href="my_works.html") Мои работы
-					li.welcome-links__item
-						a.welcome-link(href="about_me.html") Обо мне
-					li.welcome-links__item
-						a.welcome-link(href="blog.html") Блог
-		.copyright © Василий Краснов | создано с любовью в LoftSchool | 2016
+			.flipper-container
+				.flipper
+					.welcome-container
+						.welcome-container-inner
+							.user-avatar: img.user-pic(src="assets/img/userfiles/my_photo.jpg" alt="Василий Краснов")
+							.author
+								.author__name Василий Краснов
+								.author__site Личный сайт веб разработчика
+							ul.socials-list
+								li.socials__item
+									a.social-link(href="https://vk.com/id17323389" target="_blank")
+										i.icon.icon-vk_green
+								li.socials__item
+									a.social-link(href="https://github.com/VasiliuKr" target="_blank")
+										i.icon.icon-github_green
+								li.socials__item
+									a.social-link(href="https://www.linkedin.com/in/vasiliy-krasnov" target="_blank")
+										i.icon.icon-in_green
+						ul.welcome-links__list
+							li.welcome-links__item
+								a.welcome-link(href="my_works.html") Мои работы
+							li.welcome-links__item
+								a.welcome-link(href="about_me.html") Обо мне
+							li.welcome-links__item
+								a.welcome-link(href="blog.html") Блог
+					.welcome-container.welcome-container_autorization
+						.welcome-container-inner
+							.title.title_secondary Авторизуйтесь
+							form.form
+								.input-wrapper
+									.icon-wrapper
+										i.icon.icon-login
+									input(type="text" class="form__input" name="userLogin" id="userLogin" value="" placeholder="Логин")
+								.input-wrapper
+									.icon-wrapper
+										i.icon.icon-password
+									input(type="password" class="form__input" name="userPassword" id="userPassword" value="" placeholder="Пароль")
+								.checkbox-wrapper
+									input(type="checkbox" class="checkbox" id="checkbox_1")
+									label.checkbox-label(for="checkbox_1") Я человек
+								.captcha-question Вы точно не робот?
+								input(type="radio" class="radio" name="answer" value="yes" id="yes")
+								label.radio-label.radio-label_first(for="yes") Да
+								input(type="radio" class="radio" name="answer" value="no" id="no")
+								label.radio-label(for="no") Не уверен
+								.form__buttons
+									a.form__btn(href="#") На главную
+									input(type="submit" class="form__btn form__btn_submit" value="Войти")
+
+		.copyright © Василий Краснов  Cоздано с любовью в LoftSchool | 2016
