@@ -56,6 +56,10 @@ html, body {
 .container {
 	max-width: 1200px;
 	margin: 0 auto;
+	@extend %clearfix;
+	@include desktop {
+		max-width: 1800px;
+	}
 }
 .title-wrapper {
 	text-align: center;
@@ -67,6 +71,13 @@ html, body {
 		padding-left: 80px;
 		padding-right: 77px;
 	}
+	@include tablets {
+		width: 100%;
+		.column-container {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+	}
 }
 .right-column {
 	width: 50%;
@@ -74,6 +85,13 @@ html, body {
 	.column-container {
 		padding-left: 39px;
 		padding-right: 10px;
+	}
+	@include tablets {
+		width: 100%;
+		.column-container {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
 	}
 }
 .column-container {
@@ -131,6 +149,7 @@ html, body {
 	}
 	@include phones {
 		font-size: 21px;
+		max-width: 150px;
 	}
 }
 .form {

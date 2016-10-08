@@ -7,11 +7,16 @@ body {
 	background-size: cover;
 	position: relative;
 	background-position: 50% 10%;
-	
+	@include desktop {
+		background-image: url('../img/mountains_header_large.jpg');
+	}
+	@include tablets {
+		background-image: url('../img/mountains_header_tablets.jpg');
+	}
 	@include phones {
-			
-			text-align: center;
-		}
+		background-image: url('../img/mountains_header_phones.jpg');
+		text-align: center;
+	}
 }
 .autorization-button {
 	position: absolute;
@@ -50,7 +55,7 @@ body {
 	right: 0;
 	margin: auto;
 	perspective: 1000px;
-	width: 380px;
+	max-width: 380px;
 	height: 397px;
 }
 .flipper {

@@ -64,10 +64,11 @@
 		padding-top: 15px;
 		margin-left: 0;
 		margin-right: 0;
+		opacity: 0.5;
 	}
 	@include phones {
 		font-size: 13px;
-		opacity: 0.5;
+		
 	}
 }
 .footer-text {

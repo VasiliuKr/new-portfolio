@@ -11,7 +11,7 @@
 }
 .title-wrapper {
 	margin-top: 40px;
-	@include tablets {
+	@include phones {
 		margin-top: 0;
 	}
 	.transparent-title {
@@ -202,7 +202,11 @@
 	background: url('../img/lake_bg.png');
 	background-size: cover;
 	padding-bottom: 220px;
+	@include desktop {
+		background-image: url('../img/lake_bg_large.png');
+	}
 	@include tablets {
+		background-image: url('../img/lake_bg_tablets.png');
 		.title-wrapper {
 			margin-top: 40px;
 		}
@@ -313,7 +317,6 @@
 			display: inline-block;
 		}
 		@include phones {
-			margin-bottom: 40px;
 			&:before {
 				left: -40px;
 				top: 45%;
@@ -333,7 +336,7 @@
 	}
 	@include phones {
 		margin-bottom: 40px;
-		width: 300px;
+		width: 100%;
 	}
 }
 

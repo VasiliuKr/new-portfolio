@@ -16,12 +16,12 @@ var myModule = (function () {
 		var $this = $(this),
 		flipper = $('.flipper');
 
-		$this.hide();
+		$this.css('visibility', 'hidden');
 		flipper.css('transform', 'rotateY(180deg)');
 		console.log('flip!');
 		$('a.form__btn').click(function(e) {
 			e.preventDefault();
-			$this.show();
+			$this.css('visibility', 'visible');
 			flipper.css('transform', 'rotateY(0deg)');
 			console.log('flip back!');
 		});

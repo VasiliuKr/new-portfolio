@@ -3,14 +3,34 @@
 
 .header {
 	height: 400px;
+	@include tablets {
+		height: 500px;
+	}
+	@include phones {
+		height: 560px;
+	}
 }
 .header-links {
 	margin-bottom: 10px;
+	@include phones {
+		margin-bottom: 70px;
+	}
 }
 .author,
-.header .transparent-title,
+.header .transparent-title {
+	display: none;
+}
 .arrow-down-link {
 	display: none;
+	@include tablets {
+		display: block;
+		margin-top: 190px;
+	}
+}
+.page-wrapper {
+	@include tablets {
+		margin-bottom: -150px;
+	}
 }
 .title-wrapper {
 	margin-top: -157px;
@@ -25,6 +45,10 @@
 	.transparent-title {
 		margin-top: -115px;
 	}
+	@include tablets {
+		margin-top: -270px;
+		margin-bottom: 110px;
+	}
 }
 .subheading {
 	color: #fff;
@@ -33,17 +57,36 @@
 	margin-top: -150px;
 	height: 150px;
 	background-image: url(../img/bg_white.png);
+	@include desktop {
+		margin-top: -180px;
+		height: 200px;
+	}
+	@include tablets {
+		margin-top: -90px;
+		height: 90px;
+	}
+	@include phones {
+		margin-top: -55px;
+		height: 60px;
+	}
 }
 .container {
 	@extend %clearfix;
 }
 .sidebar {
 	float: left;
-	max-width: 310px;
+	width: 26%;
 	text-align: right;
 	margin-top: 22px;
 	line-height: 26px;
-
+	margin-right: 8.5%;
+	@include desktop {
+		width: 22%;
+		margin-right: 6.5%;
+	}
+	@include tablets {
+		display: none;
+	}
 }
 
 .sidebar__link {
@@ -59,9 +102,16 @@
 	}
 }
 .articles {
-	float: right;
-	max-width: 790px;
-	padding-right: 110px;
+	float: left;
+	width: 58%;
+	@include desktop {
+		width: 50%;
+	}
+	@include tablets {
+		width: 100%;
+		padding-left: 25px;
+		padding-right: 25px;
+	}
 }
 .articles__list {
 	padding-left: 0;
@@ -81,12 +131,23 @@
 	font: 35px Bernier;
 	margin-top: 0;
 	margin-bottom: 19px;
+	@include tablets {
+		font-size: 30px;
+	}
 }
 .article-time {
 	color: $main-color;
+	@include tablets {
+		font-size: 14px;
+		line-height: 24px;
+	}
 }
 .article {
 	line-height: 26px;
+	@include tablets {
+		font-size: 14px;
+		line-height: 24px;
+	}
 }
 .article-image {
 	width: 100%;

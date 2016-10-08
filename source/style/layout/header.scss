@@ -1,9 +1,19 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
 .header {
 	background: url(../img/mountains_header.jpg);
 	background-size: cover;
 	height: 620px;
+	@include desktop {
+		background-image: url(../img/mountains_header_large.jpg);
+	}
+	@include tablets {
+		background-image: url(../img/mountains_header_tablets.jpg);
+		height: 560px;
+	}
 	@include phones {
-		height: 550px;
+		background-image: url(../img/mountains_header_phones.jpg);
 	}
 	.transparent-title {
 		margin-left: 25px;
