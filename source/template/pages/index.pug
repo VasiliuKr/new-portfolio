@@ -18,6 +18,8 @@ html(lang="ru")
 
 		script(src='/assets/js/foundation.js' defer)
 		script(src='/assets/js/app.js' defer)
+		script(src='/assets/js/validation.js' defer)
+		script(src='/assets/js/login.js' defer)
 
 
 		<!--[if lt IE 9]>
@@ -55,15 +57,21 @@ html(lang="ru")
 					.welcome-container.welcome-container_autorization
 						.welcome-container-inner
 							.title.title_secondary Авторизуйтесь
-							form.form
+							form.form#login
 								.input-wrapper
 									.icon-wrapper
 										i.icon.icon-login
 									input(type="text" class="form__input" name="userLogin" id="userLogin" value="" placeholder="Логин")
+									.tooltip-wrapper
+										.tooltip.tooltip-bottom
+											span.tooltip-text Вы не ввели логин
 								.input-wrapper
 									.icon-wrapper
 										i.icon.icon-password
 									input(type="password" class="form__input" name="userPassword" id="userPassword" value="" placeholder="Пароль")
+									.tooltip-wrapper
+										.tooltip.tooltip-bottom
+											span.tooltip-text Вы не ввели пароль
 								.checkbox-wrapper
 									input(type="checkbox" class="checkbox" id="checkbox_1")
 									label.checkbox-label(for="checkbox_1") Я человек

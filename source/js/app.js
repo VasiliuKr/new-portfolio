@@ -1,4 +1,4 @@
-var myModule = (function () {
+var flipModule = (function () {
 
 	var init = function () {
 		_setUpListeners();
@@ -18,12 +18,12 @@ var myModule = (function () {
 
 		$this.css('visibility', 'hidden');
 		flipper.css('transform', 'rotateY(180deg)');
-		console.log('flip!');
+		
 		$('a.form__btn').click(function(e) {
 			e.preventDefault();
 			$this.css('visibility', 'visible');
 			flipper.css('transform', 'rotateY(0deg)');
-			console.log('flip back!');
+			
 		});
 	};
 
@@ -33,4 +33,4 @@ var myModule = (function () {
 
 })();
 
-myModule.init();
+flipModule.init();

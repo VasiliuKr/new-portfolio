@@ -75,7 +75,7 @@
 }
 .sidebar {
 	float: left;
-	width: 26%;
+	width: 30%;
 	text-align: right;
 	margin-top: 22px;
 	line-height: 26px;
@@ -89,6 +89,14 @@
 	}
 }
 
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 30%;
+	@include desktop {
+		width: 22%;
+	}
+}
 .sidebar__link {
 	padding-bottom: 13px;
 	padding-top: 13px;

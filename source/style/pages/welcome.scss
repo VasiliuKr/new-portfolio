@@ -65,7 +65,6 @@ body {
 }
 .welcome-container {
 	width: 380px;
-	height: 397px;
 	position: absolute;
 	backface-visibility: hidden;
 	border-radius: 5px;
@@ -159,7 +158,6 @@ body {
 		margin-bottom: 20px;
 		width: 90%;
 		border-radius: 5px;
-		overflow: hidden;
 	}
 	.icon-wrapper {
 		float: left;
@@ -177,9 +175,12 @@ body {
 		}
 	}
 	.form__input {
-		float: left;
 		width: 86%;
 		border-radius: 0;
+		&:focus {
+			border: 1px solid $main-color;
+			outline: none;
+		}
 	}
 }
 .checkbox-wrapper {
