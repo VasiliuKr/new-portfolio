@@ -24,29 +24,42 @@
 .portfolio {
 	position: relative;
 	background-color: #e6e6e1;
+	padding-top: 90px;
+	@include phones {
+		padding-top: 30px;
+	}
 }
 .portfolio__list {
-	padding-top: 90px;
+	
 	padding-left: 0;
 	max-width: 1020px;
 	height: 780px;
 	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
 	@include tablets {
 		max-width: 520px;
 		height: 1015px;
 	}
 	@include phones {
-		padding-top: 30px;
 		height: 600px;
 	}
 }
 .portfolio__item {
 	@extend %clearfix;
-	display: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 0;
 	height: 100%;
-}
-.portfolio__item.active {
-	display: block;
+	background-color: #e6e6e1;
+	&.active {
+		z-index: 1;
+		position: relative;
+	}
+	&.inslide {
+		z-index: 2;
+	}
 }
 .project-image {
 	float: right;

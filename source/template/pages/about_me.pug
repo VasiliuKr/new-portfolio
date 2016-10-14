@@ -7,7 +7,10 @@ block styles
 	link(rel='stylesheet' href='/assets/css/about_me.css')
 
 block scripts
-
+	script(src='/assets/js/googleMaps.js' defer)
+	script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyCPU6pqrmnRz-clxSj_KIs0SwOcXWSjfQQ&callback=initMap' async defer)
+	script(src='/assets/js/jquery.knob.js' defer)
+	script(src='/assets/js/skills.js' defer)
 
 block content
 	.main-content
@@ -36,30 +39,41 @@ block content
 						.skills__title Frontend
 						ul.skills__list
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="80" class='dial')
+								span.dial-text HTML5
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="80" class='dial')
+								span.dial-text CSS3
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="60" class='dial')
+								span.dial-text JavaScript & jQuery
 						.skills__title Backend
 						ul.skills__list
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="20" class='dial')
+								span.dial-text PHP
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="20" class='dial')
+								span.dial-text mySQL
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="50" class='dial')
+								span.dial-text Node.js & npm
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="20" class='dial')
+								span.dial-text Mongo.db
 						.skills__title Workflow
 						ul.skills__list
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="60" class='dial')
+								span.dial-text Git
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="70" class='dial')
+								span.dial-text Gulp
 							li.skills__item
-								img(class="skills__pic" src="assets/img/diagram.png")
+								input(type="text" value="70" class='dial')
+								span.dial-text Bower
 	.contacts-wrapper
+		#myGoogleMap.map-container
 		.contacts
 			.title.title_secondary Контакты
 			ul.contacts__list

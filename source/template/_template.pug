@@ -19,14 +19,17 @@ html(lang="ru")
 		block styles
 
 		script(src='/assets/js/foundation.js' defer)
-
+		script(src='/assets/js/preloader.js' defer)
 		block scripts
+		script(src='/assets/js/menu.js' defer)
+
 
 		<!--[if lt IE 9]>
 		script(src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.2/html5shiv.min.js")
 		<![endif]-->
 
 	body
+
 		.page-wrapper
 			header.header
 				.transparent-layer
@@ -50,7 +53,7 @@ html(lang="ru")
 						img(class="adaptive-pic" src="assets/img/portfolio_header.png")
 					a.arrow-down-link(href="#")
 						.icon-arrow_down
-
+			
 			block content
 
 		footer.footer
@@ -73,4 +76,25 @@ html(lang="ru")
 			.footer-text_wrapper
 				.footer-text Я веб-разработчик из Чебоксар, и этот сайт я сделал в рамках обучения в Школе онлайн-образования LoftSchool
 				.copyright © Василий Краснов | Создано с любовью в LoftSchool | 2016
-
+		.fullscreen-menu
+			a.close-btn(href="#")
+			ul.fullscreen-menu__list
+				li.fullscreen-menu__item
+					a.fullsreen-menu__link(href="my_works.html")
+						.title.title_main Мои работы
+				li.fullscreen-menu__item
+					a.fullsreen-menu__link(href="about_me.html")
+						.title.title_main Блог
+				li.fullscreen-menu__item
+					a.fullsreen-menu__link(href="blog.html")
+						.title.title_main Обо мне
+				li.fullscreen-menu__item
+					a.fullsreen-menu__link(href="index.html")
+						.title.title_main Авторизация
+		.preloader
+			.preloader__spinner
+				.preloader__animation
+				.preloader__percents 0%
+			
+			
+						

@@ -1,6 +1,9 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
+html, body {
+	height: 100%;
+}
 body {
 	background: url('../img/mountains_header.jpg');
 	background-repeat: no-repeat;
