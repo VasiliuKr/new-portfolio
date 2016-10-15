@@ -132,7 +132,6 @@ body {
 	background: rgba($main-color,0.85);
 	color: #fff;
 	font-weight: 500;
-	padding: 16px 0;
 	width: 33.33%;
 	display: inline-block;
 	text-align: center;
@@ -146,6 +145,10 @@ body {
 	&:not(:last-child) {
 		border-right: 1px solid #dee3e7;
 	}
+}
+.welcome-link {
+	display: block;
+	padding: 16px 0;
 }
 .welcome-container_autorization {
 	// visibility: hidden;
