@@ -10,6 +10,7 @@ block scripts
 	script(src='/assets/js/validation.js' defer)
 	script(src='/assets/js/contact-me.js' defer)
 	script(src='/assets/js/slider.js' defer)
+	script(src='/assets/js/blur.js' defer)
 
 block content
 	.main-content
@@ -91,25 +92,27 @@ block content
 						.review-author-inner
 							cite.review-author-name Зар Захаров
 							.review-author-position преподаватель
-		.feedback__form
-			.title.title_secondary Связаться со мной
-			form.form#contact-me
-				.input-wrapper
-					input(type="text" class="form__input" name="userName" id="userName" value="" placeholder="Имя")
-					.tooltip-wrapper
-						.tooltip.tooltip-bottom
-							span.tooltip-text Вы не ввели имя
-				.input-wrapper
-					input(type="email" class="form__input" name="userEmail" id="userEmail" value="" placeholder="Email")
-					.tooltip-wrapper
-						.tooltip.tooltip-bottom
-							span.tooltip-text Вы не ввели email
-				.input-wrapper
-					textarea(name="message" id="message" class="form__input" cols="40" rows="6" placeholder="Ваше сообщение")
-					.tooltip-wrapper
-						.tooltip.tooltip-bottom
-							span.tooltip-text Вы не ввели сообщение
-				input(type="submit" class="form__btn form__btn_submit" value="Отправить")
-				input(type="reset" class="form__btn form__btn_reset" value="Очистить")
+		.feedback__form-wrapper
+			.feedback__form
+			.feedback__form-inner
+				.title.title_secondary Связаться со мной
+				form.form#contact-me
+					.input-wrapper
+						input(type="text" class="form__input" name="userName" id="userName" value="" placeholder="Имя")
+						.tooltip-wrapper
+							.tooltip.tooltip-bottom
+								span.tooltip-text Вы не ввели имя
+					.input-wrapper
+						input(type="email" class="form__input" name="userEmail" id="userEmail" value="" placeholder="Email")
+						.tooltip-wrapper
+							.tooltip.tooltip-bottom
+								span.tooltip-text Вы не ввели email
+					.input-wrapper
+						textarea(name="message" id="message" class="form__input" cols="40" rows="6" placeholder="Ваше сообщение")
+						.tooltip-wrapper
+							.tooltip.tooltip-bottom
+								span.tooltip-text Вы не ввели сообщение
+					input(type="submit" class="form__btn form__btn_submit" value="Отправить")
+					input(type="reset" class="form__btn form__btn_reset" value="Очистить")
 		a.arrow-up-link(href="#")
 			.icon-arrow_up

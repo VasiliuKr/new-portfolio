@@ -214,7 +214,9 @@
 .feedback {
 	background: url('../img/lake_bg.png');
 	background-size: cover;
+	background-repeat: no-repeat;
 	padding-bottom: 220px;
+	position: relative;
 	@include desktop {
 		background-image: url('../img/lake_bg_large.png');
 	}
@@ -316,13 +318,41 @@
 	font-weight: 500;
 	font-style: normal;
 }
-.feedback__form {
+.feedback__form-wrapper {
 	width: 380px;
-	margin: 0 auto 68px auto;
-	padding-top: 30px;
-	background: rgba($main-color,0.85);
+	height: 440px;
 	border-radius: 5px;
 	overflow: hidden;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -10%);
+	position: relative;
+	@include tablets {
+		width: 350px;
+	}
+	@include phones {
+		width: 100%;
+	}
+}
+.feedback__form {
+	background: url('../img/lake_bg.jpg') center no-repeat;
+	width: 100%;
+	height: 100%;
+	padding-top: 30px;
+	filter: blur(20px);
+	@include desktop {
+		background: url('../img/lake_bg_Large.jpg') center no-repeat;
+	}
+	@include tablets {
+		background: url('../img/lake_bg_tablets.jpg') center no-repeat;
+	}
+	@include phones {
+		background: url('../img/lake_bg_phones.jpg') center no-repeat;
+	}
+}
+.feedback__form-inner {
+	position: absolute;
+	top: 30px;
 	.title {
 		margin: 0 auto;
 		display: block;
@@ -352,7 +382,6 @@
 		width: 100%;
 	}
 }
-
 .form__btn {
 	background: rgba($main-color,0.85);
 	color: #fff;
@@ -378,4 +407,7 @@
 	.icon-arrow_up {
 		margin: 0 auto;
 	}
+}
+.footer {
+	position: relative;
 }
