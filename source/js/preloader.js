@@ -69,7 +69,10 @@ var preloader = (function () {
 			var percent = Math.ceil(current / total * 100);
 
 			if (percent >= 10) {
-				$('.preloader').css('background-image', 'url(assets/img/bg_preload.jpg)');
+				$('.preloader').css({
+					'background-image': 'url(assets/img/bg_preload.jpg)',
+					'background-size': 'cover'
+				});
 			}
 
 			if (percent >= 100) {

@@ -28,6 +28,7 @@ var validation = (function () {
 		tooltip = element.siblings('.tooltip-wrapper');
 		tooltip.show();
 	}
+
 	// Универсальная функция
 
 	var validateForm = function (form) {
@@ -42,7 +43,7 @@ var validation = (function () {
 
 			if(val.length === 0) {
 				element.addClass('error');
-				_createTooltip(element);
+				// _createTooltip(element);
 				valid = false;
 			}
 		});

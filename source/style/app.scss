@@ -134,7 +134,7 @@ html, body {
 	max-width: 300px;
 	@include tablets {
 		font-size: 49px;
-		max-width: 600px;
+		max-width: 70%;
 	}
 	@include phones {
 		font-size: 35px;
@@ -146,7 +146,7 @@ html, body {
 	max-width: 270px;
 	@include tablets {
 		font-size: 30px;
-		max-width: 100%;
+		max-width: 70%;
 	}
 	@include phones {
 		font-size: 21px;
@@ -159,9 +159,9 @@ html, body {
 }
 .form__input {
 	display: block;
-	border: none;
+	border: 1px solid $main-color;
 	border-radius: 4px;
-	padding: 14px 20px;
+	padding: 13px 20px;
 	color: #373e42;
 	resize: none;
 	width: 100%;

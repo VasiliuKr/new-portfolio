@@ -11,7 +11,7 @@ body {
 	position: relative;
 	background-position: 50% 10%;
 	@include desktop {
-		background-image: url('../img/mountains_header_large.jpg');
+		background-image: none;
 	}
 	@include tablets {
 		background-image: url('../img/mountains_header_tablets.jpg');
@@ -20,6 +20,31 @@ body {
 		background-image: url('../img/mountains_header_phones.jpg');
 		text-align: center;
 	}
+}
+.parallax {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 45%;
+	height: 100vh;
+	overflow: hidden;
+	margin-left: -50%;
+	display: none;
+	@include desktop {
+		display: block;
+	}
+}
+.parallax__layer {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+.parallax__img {
+	position: absolute;
+	bottom: -25%;
+	width: 110%;
 }
 .autorization-button {
 	position: absolute;

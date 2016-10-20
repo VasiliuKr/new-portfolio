@@ -329,6 +329,7 @@
 	position: relative;
 	@include tablets {
 		width: 350px;
+		max-width: 100%;
 	}
 	@include phones {
 		width: 100%;
@@ -341,7 +342,7 @@
 	padding-top: 30px;
 	filter: blur(20px);
 	@include desktop {
-		background: url('../img/lake_bg_Large.jpg') center no-repeat;
+		background: url('../img/lake_bg_large.jpg') center no-repeat;
 	}
 	@include tablets {
 		background: url('../img/lake_bg_tablets.jpg') center no-repeat;
@@ -392,6 +393,7 @@
 	float: left;
 	width: 50%;
 	border: none;
+	outline: none;
 	&:hover {
 		background: rgba($main-color-active,0.6);
 	}
