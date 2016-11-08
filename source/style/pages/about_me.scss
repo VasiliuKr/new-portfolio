@@ -31,16 +31,7 @@
 	.transparent-title {
 		margin-top: -110px;
 	}
-	@include desktop {
-		.column-container {
-			padding-left: 45px;
-			padding-right: 30px;
-		}
-		.column-container-inner {
-			float: left;
-			width: 50%;
-		}
-	}
+	
 	@include tablets {
 		.column-container {
 			padding-top: 150px;
