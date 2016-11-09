@@ -208,10 +208,6 @@ body {
 	.form__input {
 		width: 86%;
 		border-radius: 0;
-		&:focus {
-			border: 1px solid $main-color;
-			outline: none;
-		}
 	}
 }
 .checkbox-wrapper {
