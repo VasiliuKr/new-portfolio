@@ -32,6 +32,8 @@ body {
 	display: none;
 	@include desktop {
 		display: block;
+		background-image: url('../img/parallax/layer_0.png');
+		background-size: cover;
 	}
 }
 .parallax__layer {
