@@ -62,6 +62,13 @@ html, body {
 		max-width: 1800px;
 	}
 }
+.text-link {
+	color: $main-color;
+	text-decoration: underline;
+	&:hover {
+		color: $main-color-active;
+	}
+}
 .title-wrapper {
 	text-align: center;
 }
