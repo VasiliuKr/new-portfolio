@@ -1,15 +1,7 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.header {
-	height: 400px;
-	@include tablets {
-		height: 500px;
-	}
-	@include phones {
-		height: 560px;
-	}
-}
+
 .header-links {
 	margin-bottom: 10px;
 	@include phones {
@@ -33,7 +25,8 @@
 	}
 }
 .title-wrapper {
-	margin-top: -157px;
+	position: relative;
+	top: 300px;
 	.title {
 		color: #fff;
 		&:before,
@@ -46,12 +39,18 @@
 		margin-top: -115px;
 	}
 	@include tablets {
-		margin-top: -270px;
+		
 		margin-bottom: 110px;
 	}
 }
 .subheading {
 	color: #fff;
+}
+.main-content {
+	top: 420px;
+	@include tablets {
+		top: 265px;
+	}
 }
 .triangle {
 	margin-top: -150px;
@@ -62,7 +61,7 @@
 		height: 200px;
 	}
 	@include tablets {
-		margin-top: -90px;
+		margin-top: -70px;
 		height: 90px;
 	}
 	@include phones {
@@ -164,4 +163,12 @@
 }
 .article-image {
 	width: 100%;
+}
+.footer {
+	position: relative;
+	top: 420px;
+	background: rgba(69, 90, 100, 1);
+	@include tablets {
+		top: 265px;
+	}
 }

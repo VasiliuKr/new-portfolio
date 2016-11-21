@@ -38,6 +38,11 @@ html, body {
 .main-content {
 	@extend %clearfix;
 	background: #fff;
+	position: relative;
+	top: 620px;
+	@include tablets {
+		top: 560px;
+	}
 }
 .triangle {
 	background: url('../img/bg.png');

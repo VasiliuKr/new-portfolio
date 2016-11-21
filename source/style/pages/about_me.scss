@@ -132,8 +132,10 @@
 .contacts-wrapper {
 	height: 978px;
 	position: relative;
+	top: 620px;
 	@include tablets {
 		height: 860px;
+		top: 560px;
 	}
 }
 .map-container {
@@ -189,4 +191,5 @@
 }
 .footer {
 	position: relative;
+	top: 620px;
 }
