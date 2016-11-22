@@ -24,29 +24,53 @@ body {
 .parallax {
 	position: absolute;
 	top: 0;
-	right: 0;
-	left: 45%;
-	height: 100vh;
+	left: 0;
+	height: 100%;
+	width: 100%;
 	overflow: hidden;
-	margin-left: -50%;
 	display: none;
 	@include desktop {
 		display: block;
-		background-image: url('../img/parallax/layer_0.png');
-		background-size: cover;
 	}
 }
 .parallax__layer {
-	left: 0;
-	top: 0;
-	bottom: 0;
-	right: 0;
-	position: absolute;
-}
-.parallax__img {
-	position: absolute;
-	bottom: -25%;
 	width: 110%;
+	height: 110%;
+	position: absolute;
+	top: -5%;
+	left: -5%;
+	background-size: cover;
+	background-position-y: 40%;
+}
+.parallax__layer_01 {
+	background-image: url(../img/parallax/layer_0.png);
+}
+.parallax__layer_02 {
+	background-image: url(../img/parallax/layer_1.png);
+}
+.parallax__layer_03 {
+	background-image: url(../img/parallax/layer_2.png);
+}
+.parallax__layer_04 {
+	background-image: url(../img/parallax/layer_3.png);
+}
+.parallax__layer_05 {
+	background-image: url(../img/parallax/layer_4.png);
+}
+.parallax__layer_06 {
+	background-image: url(../img/parallax/layer_5.png);
+}
+.parallax__layer_07 {
+	background-image: url(../img/parallax/layer_6.png);
+}
+.parallax__layer_08 {
+	background-image: url(../img/parallax/layer_7.png);
+}
+.parallax__layer_09 {
+	background-image: url(../img/parallax/layer_8.png);
+}
+.parallax__layer_10 {
+	background-image: url(../img/parallax/layer_9.png);
 }
 .autorization-button {
 	position: absolute;
