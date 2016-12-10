@@ -84,10 +84,28 @@
 		margin-right: 6.5%;
 	}
 	@include tablets {
-		display: none;
+		position: fixed;
+		float: none;
+		top: 0;
+		left: -60%;
+		bottom: 0;
+		margin-top: 0;
+		width: 60%;
+		height: 100%;
+		padding-top: 80px;
+		text-align: left;
+		background-color: $main-color;
+		transition: all .3s;
+	}
+	@include phones {
+		width: 80%;
+		left: -80%;
 	}
 }
-
+.sidebar_active {
+	left: 0%;
+	color: rgba(255,255,255,.7);
+}
 .fixed {
 	position: fixed;
 	top: 0;
@@ -95,6 +113,36 @@
 	@include desktop {
 		width: 22%;
 	}
+	@include tablets {
+		position: relative;
+		width: 100%;
+	}
+}
+.sidebar-toggle {
+	position: absolute;
+	top: 40%;
+	right: -30px;
+	height: 100px;
+	width: 100px;
+	border-radius: 50%;
+	background-color: $main-color;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	z-index: -1;
+}
+.sidebar-toggle__arrow {
+	position: absolute;
+	width: 20px;
+	height: 30px;
+	top: 35%;
+	left: 70%;
+}
+.sidebar-toggle__arrow_right {
+	background-image: url(../img/arrow_right.png);
+}
+.sidebar-toggle__arrow_left {
+	background-image: url(../img/arrow_left.png);
 }
 .sidebar__link {
 	padding-bottom: 13px;
@@ -103,13 +151,23 @@
 	display: block;
 	font-weight: 500;
 	&:hover {
-		
 		color: $main-color;
 	}
 	&.sidebar__link_active {
 		color: $main-color;
 		border-right: 2px solid $main-color;
 		margin-right: -2px;
+	}
+	@include tablets {
+		color: rgba(255, 255, 255, 0.7);
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+		}
+		&.sidebar__link_active {
+			color: rgba(255, 255, 255, 1);
+			border-right: none;
+			margin-right: 0;
+		}
 	}
 }
 

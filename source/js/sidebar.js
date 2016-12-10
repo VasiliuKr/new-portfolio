@@ -1,6 +1,8 @@
-var sidebarSticky = (function () {
+var blogSidebar = (function () {
 
-	var menu = $('.sidebar__list'),
+	var sidebar = $('.sidebar'),
+		buttonArrow = sidebar.find('.sidebar-toggle__arrow'),
+		menu = $('.sidebar__list'),
 		menuTop = menu.offset().top + 100,
 		menuItems = menu.find('.sidebar__link'),
 		titles = [],
@@ -21,6 +23,7 @@ var sidebarSticky = (function () {
 		// прослушка событий...
 		$(window).on('scroll', _sticky);
 		$('.sidebar__link').on('click', _activeMenuItem);
+		$('.sidebar-toggle').on('click', _toggleSidebar);
 	};
 
 	var _sticky = function () {
@@ -48,8 +51,28 @@ var sidebarSticky = (function () {
 	var _activeMenuItem = function (e) {
 		menuItems.removeClass('sidebar__link_active');
 		$(this).addClass('sidebar__link_active');
+
+		if (sidebar.hasClass('sidebar_active')) {
+			sidebar.removeClass('sidebar_active');
+			buttonArrow.removeClass('sidebar-toggle__arrow_left')
+			.addClass('sidebar-toggle__arrow_right');
+		}
 		
 	};
+
+	var _toggleSidebar = function (e) {
+		e.preventDefault();
+
+		if (sidebar.hasClass('sidebar_active')) {
+			sidebar.removeClass('sidebar_active');
+			buttonArrow.removeClass('sidebar-toggle__arrow_left')
+			.addClass('sidebar-toggle__arrow_right');
+		} else {
+			sidebar.addClass('sidebar_active');
+			buttonArrow.removeClass('sidebar-toggle__arrow_right')
+			.addClass('sidebar-toggle__arrow_left');
+		}
+	}
 
 	return {
 		init: init
@@ -57,4 +80,4 @@ var sidebarSticky = (function () {
 
 })();
 
-sidebarSticky.init()
+blogSidebar.init()
