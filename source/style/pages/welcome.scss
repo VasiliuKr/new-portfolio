@@ -166,6 +166,8 @@ body {
 		vertical-align: middle;
 		margin-right: 12px;
 		margin-left: 12px;
+		width: 35px;
+		height: 25px;
 	}
 }
 .welcome-links__list {
@@ -230,6 +232,17 @@ body {
 			right: 0;
 			margin: auto;
 		}
+	}
+	.auth-icon {
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		fill: #C4CBCD;
 	}
 	.form__input {
 		width: 86%;

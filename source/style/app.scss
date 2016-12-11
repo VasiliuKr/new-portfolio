@@ -16,6 +16,43 @@ html, body {
 	font-family: Roboto;
 	position: relative;
 }
+.social-icon {
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	&:hover{
+		opacity: 1;
+	}
+	&_white {
+		fill: #fff;
+	}
+	&_green {
+		fill: $main-color;
+	}
+}
+.arrow_down {
+	width: 26px;
+	height: 16px;
+	margin: 0 auto;
+}
+.arrow_up {
+	width: 26px;
+	height: 16px;
+	margin: 0 auto;
+	transform: rotate(180deg);
+}
+.link-icon {
+	width: 20px;
+	height: 20px;
+	fill: #fff;
+	vertical-align: middle;
+}
+.contact-icon {
+	width: 24px;
+	height: 24px;
+	fill: $main-color;
+	vertical-align: middle;
+}
 .page-wrapper {
 	min-height: 100%;
 	margin-bottom: -150px; // Равно высоте футера

@@ -54,13 +54,16 @@ html(lang="ru")
 							ul.socials-list
 								li.socials__item
 									a.social-link(href="https://vk.com/id17323389" target="_blank")
-										i.icon.icon-vk_green
+										svg.social-icon.social-icon_green
+											use(xlink:href="assets/img/sprite.svg#vk")
 								li.socials__item
 									a.social-link(href="https://github.com/VasiliuKr" target="_blank")
-										i.icon.icon-github_green
+										svg.social-icon.social-icon_green
+											use(xlink:href="assets/img/sprite.svg#github")
 								li.socials__item
 									a.social-link(href="https://www.linkedin.com/in/vasiliy-krasnov" target="_blank")
-										i.icon.icon-in_green
+										svg.social-icon.social-icon_green
+											use(xlink:href="assets/img/sprite.svg#in")
 						ul.welcome-links__list
 							li.welcome-links__item
 								a.welcome-link(href="my_works.html") Мои работы
@@ -74,14 +77,16 @@ html(lang="ru")
 							form.form#login
 								.input-wrapper
 									.icon-wrapper
-										i.icon.icon-login
+										svg.auth-icon
+											use(xlink:href="assets/img/sprite.svg#login")
 									input(type="text" class="form__input" name="userLogin" id="userLogin" value="" placeholder="Логин")
 									.tooltip-wrapper
 										.tooltip.tooltip-bottom
 											span.tooltip-text Вы не ввели логин
 								.input-wrapper
 									.icon-wrapper
-										i.icon.icon-password
+										svg.auth-icon
+											use(xlink:href="assets/img/sprite.svg#password")
 									input(type="password" class="form__input" name="userPassword" id="userPassword" value="" placeholder="Пароль")
 									.tooltip-wrapper
 										.tooltip.tooltip-bottom

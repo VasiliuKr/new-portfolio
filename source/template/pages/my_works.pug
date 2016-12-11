@@ -27,7 +27,8 @@ block content
 							.title.title_secondary Сайт-портфолио
 							.project-tools Pug, Sass, Javasсript, Jquery, Gulp 4
 							a.project-link(href="http://krasnov-v.ru" target="_blank")
-								i.icon.icon-link
+								svg.link-icon
+									use(xlink:href="assets/img/sprite.svg#link")
 								span.button-text Посмотреть сайт
 					.project-image
 						img.project-pic(src='assets/img/userfiles/portfolio.jpg' alt='Сайт-портфолио')
@@ -38,7 +39,8 @@ block content
 							.title.title_secondary Newsweek clone page
 							.project-tools HTML, CSS, Bootstrap
 							a.project-link(href="https://htmlpreview.github.io/?https://raw.githubusercontent.com/VasiliuKr/newsweek-page/master/index.html" target="_blank")
-								i.icon.icon-link
+								svg.link-icon
+									use(xlink:href="assets/img/sprite.svg#link")
 								span.button-text Посмотреть сайт
 					.project-image
 						img.project-pic(src='assets/img/userfiles/newsweek.jpg' alt='Newsweek')
@@ -49,7 +51,8 @@ block content
 							.title.title_secondary The Next Web clone page
 							.project-tools HTML, CSS, adaptive
 							a.project-link(href="https://htmlpreview.github.io/?https://github.com/VasiliuKr/the-next-web/blob/master/index.html" target="_blank")
-								i.icon.icon-link
+								svg.link-icon
+									use(xlink:href="assets/img/sprite.svg#link")
 								span.button-text Посмотреть сайт
 					.project-image
 						img.project-pic(src='assets/img/userfiles/thenextweb.jpg' alt='The Next Web')
@@ -60,7 +63,11 @@ block content
 				
 			.slider__controls
 				a.slider__controls-btn.slider__controls-btn_next
+					svg.social-icon.social-icon_green
+						use(xlink:href="assets/img/sprite.svg#arrow_down")
 				a.slider__controls-btn.slider__controls-btn_prev
+					svg.social-icon.social-icon_green
+						use(xlink:href="assets/img/sprite.svg#arrow_down")
 	.feedback-wrapper
 		.feedback
 			.title-wrapper
@@ -106,4 +113,6 @@ block content
 						input(type="submit" class="form__btn form__btn_submit" value="Отправить")
 						input(type="reset" class="form__btn form__btn_reset" value="Очистить")
 			a.arrow-up-link(href="#")
-				.icon-arrow_up
+				.arrow_up
+					svg.social-icon.social-icon_white
+						use(xlink:href="assets/img/sprite.svg#arrow_down")

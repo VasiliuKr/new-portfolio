@@ -46,7 +46,9 @@
 }
 .round-sosials_item {
 	float: right;
-	margin-left: 10px;
+	margin-left: 20px;
+	width: 40px;
+	height: 40px;
 	@include tablets {
 		float: none;
 		display: inline-block;

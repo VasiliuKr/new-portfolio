@@ -82,18 +82,22 @@ block content
 			ul.contacts__list
 				li.contacts__item
 					a(class="contacts__link" href="skype:vaso.lol?call")
-						i.icon.icon-skype
-					span.contacts__text vaso.lol
+						svg.contact-icon
+							use(xlink:href="assets/img/sprite.svg#skype")
+						span.contacts__text vaso.lol
 				li.contacts__item
 					a(class="contacts__link" href="mailto:vasiliy.crasnov@yandex.ru")
-						i.icon.icon-envelope
-					span.contacts__text vasil.crasnov@yandex.ru
+						svg.contact-icon
+							use(xlink:href="assets/img/sprite.svg#envelope")
+						span.contacts__text vasil.crasnov@yandex.ru
 				li.contacts__item
 					a(class="contacts__link" href="skype:+79051979764?call")
-						i.icon.icon-phone
-					span.contacts__text +7 905 197 97 64
+						svg.contact-icon
+							use(xlink:href="assets/img/sprite.svg#phone")
+						span.contacts__text +7 905 197 97 64
 				li.contacts__item
-					a(class="contacts__link" href="#")
-						i.icon.icon-map_marker
-					span.contacts__text г.Чебоксары, ул. Гагарина, д. 23
+					a(class="contacts__link")
+						svg.contact-icon
+							use(xlink:href="assets/img/sprite.svg#map_marker")
+						span.contacts__text г.Чебоксары, ул. Гагарина, д. 23
 

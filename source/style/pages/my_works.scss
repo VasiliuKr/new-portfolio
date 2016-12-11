@@ -188,27 +188,22 @@
 	top: 50%;
 	display: block;
 	z-index: 3;
-	width: 18px;
+	width: 29px;
 	height: 29px;
+	cursor: pointer;
 }
 .slider__controls-btn_next {
-	background: url(../img/arrow_right.png);
 	right: 3%;
+	transform: rotate(270deg);
 	@include phones {
 		right: 0px;
 	}
-	&:hover {
-		background: url(../img/arrow_right_hover.png);
-	}
 }
 .slider__controls-btn_prev {
-	background: url(../img/arrow_left.png);
 	left: 3%;
+	transform: rotate(90deg);
 	@include phones {
 		left: 0px;
-	}
-	&:hover {
-		background: url(../img/arrow_left_hover.png);
 	}
 }
 .feedback-wrapper {
