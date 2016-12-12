@@ -13,7 +13,6 @@ var preloader = (function () {
 	var _viewPreloader = function () {
 
 		if($(window).width() < 1200) {
-			console.log('width less than 1200px');
 			return false;
 		}
 

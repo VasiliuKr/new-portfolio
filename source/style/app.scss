@@ -227,10 +227,12 @@ html, body {
 	width: 100%;
 	display: none;
 	background-color: rgba($main-color, 0.9);
-	position: absolute;
-	top: 0;
-	padding-top: 70px;
+	top: 70px;
 	z-index: 15;
+	position: fixed;
+	@include phones {
+		top: 50px;
+	}
 }
 .close-btn {
 	height: 36px;
@@ -256,9 +258,21 @@ html, body {
 	margin-bottom: 50px;
 }
 .fullsreen-menu__link {
-	color: rgba(#fff, 0.8);
-	&:hover {
+	color: rgba(#fff, 0.6);
+	.title:before {
+		background-color: #fff;
+	}
+	.title:after {
+		background-color: #fff;
+	}
+	&:hover, &.active {
 		color: #fff;
+		.title:before {
+			opacity: 1;
+		}
+		.title:after {
+			opacity: 1;
+		}
 	}
 }
 

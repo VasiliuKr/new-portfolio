@@ -32,6 +32,20 @@ html(lang="ru")
 	body
 
 		.page-wrapper
+			.fullscreen-menu
+				ul.fullscreen-menu__list
+					li.fullscreen-menu__item
+						a.fullsreen-menu__link(href="my_works.html")
+							.title.title_main Мои работы
+					li.fullscreen-menu__item
+						a.fullsreen-menu__link(href="blog.html")
+							.title.title_main Блог
+					li.fullscreen-menu__item
+						a.fullsreen-menu__link(href="about_me.html")
+							.title.title_main Обо мне
+					li.fullscreen-menu__item
+						a.fullsreen-menu__link(href="index.html")
+							.title.title_main Авторизация
 			header.header
 				.transparent-layer
 					.header-links
@@ -48,7 +62,8 @@ html(lang="ru")
 								a.social-link(href="https://www.linkedin.com/in/vasiliy-krasnov" target="_blank")
 									svg.social-icon.social-icon_white
 										use(xlink:href="assets/img/sprite.svg#in")
-						a.menu-link(href="#"): i.icon.icon-hamburger
+						a.menu-link(href="#")
+							span.menu-link__line
 					.user-avatar: img.user-pic(src="assets/img/userfiles/my_photo.jpg" alt='Василий Краснов')
 					.author
 						.author__name Василий Краснов
@@ -87,21 +102,7 @@ html(lang="ru")
 					i "Не стыдись учиться в зрелом возрасте: лучше научиться поздно, чем никогда" &nbsp;
 					span - Эзоп
 				.copyright © Василий Краснов | Made with love in Loftschool | 2016
-		.fullscreen-menu
-			a.close-btn(href="#")
-			ul.fullscreen-menu__list
-				li.fullscreen-menu__item
-					a.fullsreen-menu__link(href="my_works.html")
-						.title.title_main Мои работы
-				li.fullscreen-menu__item
-					a.fullsreen-menu__link(href="blog.html")
-						.title.title_main Блог
-				li.fullscreen-menu__item
-					a.fullsreen-menu__link(href="about_me.html")
-						.title.title_main Обо мне
-				li.fullscreen-menu__item
-					a.fullsreen-menu__link(href="index.html")
-						.title.title_main Авторизация
+		
 		.preloader
 			.preloader__spinner
 				.preloader__animation
