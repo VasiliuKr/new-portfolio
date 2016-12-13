@@ -15,6 +15,7 @@ global.$ = {
   gp: require('gulp-load-plugins')()
 };
 
+
 $.path.task.forEach(function(taskPath) {
   require(taskPath)();
 });
@@ -37,3 +38,10 @@ $.gulp.task('default', $.gulp.series(
     'serve'
   )
 ));
+
+var checkCSS = require( 'gulp-check-unused-css' );
+
+$.gulp.task('unusedcss', function() {
+  return $.gulp.src(['./build/assets/css/*.css', './build/*.html'])
+    .pipe(checkCSS());
+});
