@@ -130,6 +130,10 @@
 	outline: none;
 	cursor: pointer;
 	z-index: -1;
+	display: none;
+	@include tablets {
+		display: block;
+	}
 }
 .sidebar-toggle__arrow {
 	position: absolute;
