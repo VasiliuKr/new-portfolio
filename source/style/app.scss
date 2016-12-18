@@ -215,12 +215,14 @@ html, body {
 	resize: none;
 	width: 100%;
 	&:focus {
-		border: 1px solid $main-color;
 		outline: none;
 	}
 	@include tablets {
 		font-size: 14px;
 	}
+}
+textarea.form__input {
+	max-height: 134px;
 }
 .fullscreen-menu {
 	height: 100%;
